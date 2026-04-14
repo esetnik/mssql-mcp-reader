@@ -1,0 +1,46 @@
+{
+  "name": "@esetnik/mssql-mcp-reader",
+  "version": "0.1.0",
+  "description": "Launcher for @connorbritain/mssql-mcp-reader preloaded with @esetnik/mssql-mcp-core (ODBC connection strings, Windows Integrated Auth, command timeout, classified query errors)",
+  "keywords": [
+    "mcp",
+    "sql-server",
+    "mssql",
+    "model-context-protocol",
+    "windows-authentication",
+    "odbc"
+  ],
+  "author": "Ethan Setnik <esetnik@proems.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/esetnik/mssql-mcp-reader.git"
+  },
+  "homepage": "https://github.com/esetnik/mssql-mcp-reader",
+  "bugs": {
+    "url": "https://github.com/esetnik/mssql-mcp-reader/issues"
+  },
+  "bin": {
+    "mssql-mcp-reader": "bin/mssql-mcp-reader.js"
+  },
+  "files": [
+    "bin"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=20.6.0"
+  },
+  "type": "module",
+  "dependencies": {
+    "@connorbritain/mssql-mcp-reader": "^0.4.2",
+    "@esetnik/mssql-mcp-core": "^0.5.2"
+  },
+  "optionalDependencies": {
+    "msnodesqlv8": "^5.1.5"
+  },
+  "overrides": {
+    "@connorbritain/mssql-mcp-core": "npm:@esetnik/mssql-mcp-core@^0.5.2"
+  }
+}
