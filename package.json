@@ -1,6 +1,6 @@
 {
   "name": "@esetnik/mssql-mcp-reader",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Launcher for @connorbritain/mssql-mcp-reader preloaded with @esetnik/mssql-mcp-core (ODBC connection strings, Windows Integrated Auth, command timeout, classified query errors)",
   "keywords": [
     "mcp",
@@ -35,12 +35,9 @@
   "type": "module",
   "dependencies": {
     "@connorbritain/mssql-mcp-reader": "^0.4.2",
-    "@esetnik/mssql-mcp-core": "^0.5.2"
+    "@connorbritain/mssql-mcp-core": "npm:@esetnik/mssql-mcp-core@^0.5.2"
   },
   "optionalDependencies": {
     "msnodesqlv8": "^5.1.5"
-  },
-  "overrides": {
-    "@connorbritain/mssql-mcp-core": "npm:@esetnik/mssql-mcp-core@^0.5.2"
   }
 }

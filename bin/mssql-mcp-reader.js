@@ -9,8 +9,13 @@ import { spawn } from "node:child_process";
 
 const require = createRequire(import.meta.url);
 
+// Resolved through the @connorbritain namespace because the reader's own
+// dep on @connorbritain/mssql-mcp-core is aliased (via the `npm:` protocol
+// in this package's dependencies) to @esetnik/mssql-mcp-core. That means
+// there's only one physical copy installed under the @connorbritain path,
+// and it contains our fork's content.
 const preloadUrl = pathToFileURL(
-  require.resolve("@esetnik/mssql-mcp-core/dist/preload-driver.js"),
+  require.resolve("@connorbritain/mssql-mcp-core/dist/preload-driver.js"),
 ).href;
 const readerEntry = require.resolve("@connorbritain/mssql-mcp-reader/dist/index.js");
 
